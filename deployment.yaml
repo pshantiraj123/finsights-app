@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finsights-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: finsights
+  template:
+    metadata:
+      labels:
+        app: finsights
+    spec:
+      containers:
+      - name: finsights-app
+        image: <your-dockerhub-username>/finsights-app:latest
+        ports:
+        - containerPort: 8080
