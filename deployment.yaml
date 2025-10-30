@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: finsights-app
-        image: <your-dockerhub-username>/finsights-app:latest
+        image: <pshantiraj123>/finsights-app:latest
         ports:
         - containerPort: 8080
